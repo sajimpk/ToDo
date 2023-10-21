@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        {% for i in list1 %}
+        <div class="">
+            <h5>{{ i.todo }}</h5>
+            <a href="{% url  'delete' i.id %}">delete</a>
+        </div>
+        {% endfor %}
+
+        <a href="{% url 'index' %}">add todo</a>
+    </div>
+    
+</body>
+</html>
